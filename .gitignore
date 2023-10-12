@@ -373,3 +373,5 @@ Project_CodeNet/
 mini_codenet/data/*.ftr
 mini_codenet/data/*.csv
 mini_codenet/data/*.pkl
+problem_analysis/problem_descriptions.tar.gz
+problem_analysis/problem_descriptions/
