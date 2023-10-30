@@ -370,6 +370,7 @@ $RECYCLE.BIN/
 # Project-specific
 datasetIBM.tar.gz
 Project_CodeNet/
+mini_codenet/*.ftr
 mini_codenet/data/*.ftr
 mini_codenet/data/*.csv
 mini_codenet/data/*.pkl
