@@ -21,7 +21,7 @@ test_perc = 0.1
 # val_perc = remainder
 
 data_dict = {}
-files = ["reward", "pretrain", "evaluate"]
+files = ["reward", "finetune", "evaluate"]
 for idx, i in enumerate([reward_data, pretrain_data, eval_data]):
     test, train, val = np.array_split(i, [int(test_perc*len(i)), int(train_perc*len(i))])
     data_dict[files[idx]] = [test, train, val]
