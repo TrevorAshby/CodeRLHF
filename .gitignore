@@ -377,3 +377,4 @@ mini_codenet/data/*.csv
 mini_codenet/data/*.pkl
 problem_analysis/problem_descriptions.tar.gz
 problem_analysis/problem_descriptions/
+finetuning/model/*pt
