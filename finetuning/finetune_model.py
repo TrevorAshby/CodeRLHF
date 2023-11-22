@@ -1,4 +1,5 @@
 import json
+import os
 import datetime
 import torch
 import pandas as pd
@@ -61,10 +62,11 @@ def train(model, dl, tokenizer, device, num_epochs=10):
 
 # our dataset class
 class CodeNetDataset(Dataset):
-    def __init__(self, feather_path, tokenizer, max_len):
+    def __init__(self, feather_path, tokenizer, max_len_in, max_len_out):
         self.data = pd.read_feather(feather_path)
         self.tokenizer = tokenizer
-        self.max_len = max_len
+        self.max_len_in = max_len_in
+        self.max_len_out = max_len_out
 
     def __len__(self):
         return len(self.data)
@@ -72,14 +74,15 @@ class CodeNetDataset(Dataset):
     def __getitem__(self, idx):
         instance = self.data.iloc[idx]
         # language = self.tokenizer(instance["language"], return_tensors='pt')
-        problem = self.tokenizer(instance["language"] + "::" + instance["problem_statement"], max_length=self.max_len, padding='max_length', truncation=True, return_tensors='pt').input_ids
-        code_solution = self.tokenizer(instance["solution"], max_length=self.max_len, padding='max_length', truncation=True, return_tensors='pt').input_ids
+        problem = self.tokenizer(instance["language"] + "::" + instance["problem_statement"], max_length=self.max_len_in, padding='max_length', truncation=True, return_tensors='pt').input_ids
+        code_solution = self.tokenizer(instance["solution"], max_length=self.max_len_out, padding='max_length', truncation=True, return_tensors='pt').input_ids
         # encoding = self.tokenizer(instance["language"] + "::" + instance["problem_statement"] + "::" + instance["solution"], max_length=self.max_len, padding='max_length', truncation=True, return_tensors='pt')
         return problem, code_solution
         # return encoding
 
 device_id = '0'
-max_length = 512
+max_length_in = 512 # for final 1024
+max_length_out = 512 # for final # 2048
 batch_size = 1
 epoch_num = 2    
 
@@ -93,7 +96,7 @@ if __name__ == '__main__':
     model = AutoModelForCausalLM.from_pretrained("gpt2-large")
     model.resize_token_embeddings(len(tokenizer))
 
-    cnds = CodeNetDataset('../mini_codenet/data/split/pretrain_train.ftr', tokenizer, max_length)
+    cnds = CodeNetDataset('../mini_codenet/data/split/pretrain_train.ftr', tokenizer, max_length_in, max_length_out)
     dl = DataLoader(cnds, batch_size=batch_size, shuffle=True)
     # print(model.config)
 
@@ -104,10 +107,12 @@ if __name__ == '__main__':
 
     train(model, dl, tokenizer, device, epoch_num)
 
+    num_mods = os.listdir('./model/')
+
     try:
-        torch.save(model.module.state_dict(), './model/cnds_model.pt')
+        torch.save(model.module.state_dict(), f'./model/cnds_model{num_mods}.pt')
     except AttributeError:
-        torch.save(model.state_dict(), './model/cnds_model.pt')
+        torch.save(model.state_dict(), f'./model/cnds_model{num_mods}.pt')
 
     
     
