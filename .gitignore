@@ -367,6 +367,9 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks,macos,windows,linux,jetbrains+all,visualstudiocode
 
+# Weights and Biases
+wandb/
+
 # Project-specific
 datasetIBM.tar.gz
 Project_CodeNet/
