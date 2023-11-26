@@ -6,7 +6,7 @@ print("Extracting and creating files...")
 filePath = './mini_codenet/data/en_mini_codenet.ftr'
 
 df = pd.read_feather(f'{filePath}')
-
+df = df.sample(frac=1)
 # MUST NOT ADD TO 1.0??
 pret_perc = 0.34
 rew_perc = 0.33
