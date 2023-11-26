@@ -28,15 +28,19 @@ def generate(text_in, tok_in, mod_in):
     dec_text = tok_in.decode(gen_text[0], skip_special_tokens=True)
     return dec_text
 
-for i in range(10):
+#for i in range(10):
     #p = df.iloc[i]['problem_statement']
     #text_in = f'Python::{p}'
+i = 0
+prompt = df.iloc[i]['problem_statement']
+print(prompt)
+print('=============')
+prompt = prompt.replace('\n', '')
+lang = df.iloc[i]['language']
+#sol = df.iloc[i]['solution']
+#assist=f'{lang}\n{sol}'
+formatted_prompt = (f"<|im_start|>user\n{prompt}<|im_end|>\n<|im_start|>assistantPython\n")
 
-    prompt = df.iloc[i]['problem_statement']
-    prompt = prompt.replace('\n', '')
-    lang = df.iloc[i]['language']
-    #sol = df.iloc[i]['solution']
-    #assist=f'{lang}\n{sol}'
-    formatted_prompt = (f"<|im_start|>user\n{prompt}<|im_end|>\n<|im_start|>assistantPython\n")
-
-    print(generate(formatted_prompt, tokenizer, model))
+print(generate(formatted_prompt, tokenizer, model))
+print('=============')
+print(df.iloc[i]['solution'])
