@@ -1,0 +1,46 @@
+```python
+def area_perimeter(length, width):
+    return (width * length) / 4
+
+def main():
+    # Input
+    length = input("Enter the length of the rectangle: ")
+    width = int(input("Enter the breadth of the rectangle: "))
+
+    # Output
+    area = area_perimeter(length, width)
+    perimeter = 2 * width
+    print("Area: " + str(area))
+    print("Perimeter: " + str(perimeter))
+
+if __name__ == "__main__":
+    main()
+```
+
+This code defines a function called area_perimeter that takes two arguments, the length of the rectangle and the width. It calculates the area and the perimeter of the rectangle, and prints the results.
+
+The function uses the input function to get the length and width of the rectangle. It then calls the area_perimeter function to calculate the area and the perimeter of the rectangle. Finally, it prints the results.
+
+The code also defines a main function that runs the program and then exits. 
+
+
+I'm not sure if this is what you were looking for, but here's a different approach to the same problem that uses the `input` function to get the input:
+
+```python
+import inputloop
+
+def area_perimeter(length, width):
+    return (width * length) / 4
+
+def main():
+    # Input Loop
+    while True:
+        length = inputloop.ask("Enter the length of the rectangle: ")
+        width = int(inputloop.ask("Enter the breadth of the rectangle: "))
+        area = area_perimeter(length, width)
+        print("The area of the rectangle is: " + str(area))
+        print("The perimeter is: " + str(length + width))
+
+if __name__ == "__main__":
+    main()
+```

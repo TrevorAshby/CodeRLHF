@@ -1,0 +1,17 @@
+```python
+def max_possible_amount(n, a):
+    if n == 0:
+        return 0
+    if a == 0:
+        return 1
+    if n == 1:
+        return a
+    if a == 1:
+        return n
+    return max(max_possible_amount(n - 1, a - 1), max_possible_amount(n - 2, a - 2))
+
+n = int(input())
+a = int(input())
+print(max_possible_amount(n, a))
+
+```

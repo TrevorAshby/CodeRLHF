@@ -383,3 +383,4 @@ problem_analysis/problem_descriptions/
 finetuning/model/*pt
 finetuning/token.txt
 finetuning/hf_model/
+finetuning/tuned_model/

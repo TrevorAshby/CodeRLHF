@@ -1,0 +1,34 @@
+```python
+def longest_increasing_subsequence(A):
+    # write your code in Python 3
+    # use a list to store the subsequnece
+    # and a counter to track the length
+    length = 0
+    subsequences = [A] * (len(A) + 1)
+    subsequences[0] = A[0]
+
+    # initialize counter to track the length
+    # of the longest increasing subsequence
+    length_of_longest_increasing_subsequence = 1
+
+    # loop through the subsequnece list
+    for i in range(1, len(A)):
+        # if the current element is greater
+        # than the previous element in the
+        # subsequnece, increase the length of
+        # the longest increasing subsequence
+        if A[i] > A[i - 1]:
+            length += 1
+            subsequences[i] = A[i]
+            length_of_longest_increasing_subsequence = max(
+                length_of_longest_increasing_subsequence,
+                i + 1
+            )
+
+    return length_of_longest_increasing_subsequence
+
+# test cases
+n = int(input())
+A = list(map(int, input().split()))
+print(longest_increasing_subsequence(A))
+```

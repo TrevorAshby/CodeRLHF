@@ -1,0 +1,64 @@
+```python
+def is_divisible(n):
+    if n == 0:
+        return False
+    return (n % 1) == 0
+
+def is_prime(n):
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def is_divisible_by(n, p):
+    if n == 0 or p == 0:
+        return False
+    return (n % p) == 0
+
+def is_even(n):
+    return n > 0 and n % 2 == 0
+
+def is_odd(n):
+    return n > 0 and n % 2 != 0
+
+def is_prime_even(n):
+    if n == 2:
+        return False
+    for i in range(3, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def is_prime_odd(n):
+    if n == 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def is_prime(n):
+    if n == 2:
+        return False
+    for i in range(3, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def is_prime_prime(n):
+    if n == 2:
+        return False
+    for i in range(3, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def is_prime_prime_prime(n):
+    if n == 2:
+        return False
+    for i in range(5, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def is```

@@ -1,0 +1,14 @@
+```python
+# Generate minimum possible absolute value of the coordinate of the destination
+min_abs_coord = 2000000000000000
+
+# Take input from standard input
+for i in range(1, int(input())):
+    # Read coordinate and destination
+    x, d = map(int, input().split())
+    # Calculate minimum possible absolute value of the coordinate
+    min_abs_coord = min(min_abs_coord, x - d)
+
+# Print minimum possible absolute value of the coordinate of the destination
+print(min_abs_coord)
+```

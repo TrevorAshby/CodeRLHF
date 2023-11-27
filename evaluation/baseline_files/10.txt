@@ -1,0 +1,15 @@
+```python
+def addition(A, B):
+    return A + B
+
+def main():
+    # Input
+    A = int(input("Enter first number: "))
+    B = int(input("Enter second number: "))
+
+    # Output
+    print("Sum: ", addition(A, B))
+
+if __name__ == "__main__":
+    main()
+```

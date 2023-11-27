@@ -1,0 +1,50 @@
+```python
+def bubble_sort(cards):
+    n = len(cards)
+    for i in range(n):
+        for j in range(n-i-1):
+            if cards[j] < cards[j+1]:
+                cards[j],cards[j+1] = cards[j+1],cards[j]
+    return cards
+
+def selection_sort(cards):
+    n = len(cards)
+    m = 0
+    for i in range(n):
+        m += 1
+        for j in range(n-i-1):
+            if cards[m-1] < cards[m]:
+                cards[m],cards[m-1] = cards[m-1],cards[m]
+    return cards
+
+def bubble_sort_bst(bst):
+    n = len(bst)
+    for i in range(n):
+        for j in range(n-i-1):
+            if bst[j] < bst[j+1]:
+                bst[j],bst[j+1] = bst[j+1],bst[j]
+    return bst
+
+def selection_sort_bst(bst):
+    n = len(bst)
+    m = 0
+    for i in range(n):
+        m += 1
+        for j in range(n-i-1):
+            if bst[m-1] < bst[j]:
+                bst[m],bst[j] = bst[j],bst[m-1]
+    return bst
+
+def bubble_sort_bst_bst(bst):
+    n = len(bst)
+    for i in range(n):
+        for j in range(n-i-1):
+            if bst[j] < bst[j+1]:
+                bst[j],bst[j+1] = bst[j+1],bst[j]
+    return bst
+
+def selection_sort_bst_bst(bst):
+    n = len(bst)
+    m = 0
+    for i in range(n):
+       ```

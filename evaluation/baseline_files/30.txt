@@ -1,0 +1,53 @@
+```python
+def topological_sort(G):
+    # Initialize variables
+    n = len(G)
+    visited = [G[i]] * n
+    queue = [G[i]]
+    
+    # Initialize validator function
+    validator = lambda x: x
+    
+    # Initialize counter
+    cnt = 0
+    
+    # Loop until all tasks have been processed
+    while len(queue) > 0:
+        v = queue.pop(0)
+        
+        # Check if v is a root
+        if v == 0:
+            # Check if v is a leaf
+            if len(visited) == n:
+                # Add v to output
+                yield visited
+                # Remove v from input
+                del visited[v]
+            else:
+                # Add v to output
+                yield visited
+                # Remove v from input
+                del visited[v]
+        else:
+            # Check if v is a child of v
+            if visited[v] == v:
+                # Add v to output
+                yield visited
+                # Remove v from input
+                del visited[v]
+            else:
+                # Add v to output
+                yield visited
+                # Add v to queue
+                queue.append(v)
+    
+    # Check if queue is empty
+    if len(queue) > 0:
+        # Add the root to output
+        yield visited
+    
+    # Check if queue is empty
+    if len(queue) > 0:
+        # Add the root to output
+        yield visited
+```

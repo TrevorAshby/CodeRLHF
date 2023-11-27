@@ -1,0 +1,66 @@
+```python
+import math
+
+def solve_problem(N):
+    # Define a function to determine if a given integer is odd
+    def is_odd(a):
+        return a % 2 == 0
+
+    # Define a function to determine if a given integer is even
+    def is_even(a):
+        return a % 2 == 0
+
+    # Define a function to determine if a given integer is odd and written as an integer
+    def is_odd_and_written_as_an_integer(a):
+        return (a ** 2 % 100) == a
+
+    # Initialize a list to hold the results
+    results = []
+
+    # Loop through each square in the given list of integers
+    for i in range(N):
+        # Check if the assigned number is odd
+        if is_odd(i):
+            continue
+
+        # Check if the written integer is odd
+        if is_odd_and_written_as_an_integer(i):
+            continue
+
+        # Check if the square is even
+        if is_even(i):
+            continue
+
+        # Add the square to the results list
+        results.append(i)
+
+    # Return the number of squares that satisfy both of the conditions
+    return len(results)
+
+# Test the function with some sample inputs
+N = 51
+results = solve_problem(N)
+print("Number of squares satisfying both conditions:", results)
+
+# Test the function with some sample inputs
+N = 3
+results = solve_problem(N)
+print("Number of squares satisfying both conditions:", results)
+
+# Test the function with some sample inputs
+N = 76
+results = solve_problem(N)
+print("Number of squares satisfying both conditions:", results)
+
+# Test the function with some sample inputs
+N = 46
+results = solve_problem(N)
+print("Number of squares satisfying both conditions:", results)
+
+# Test the function with some sample inputs
+N = 1513
+results = solve_problem(N)
+print("Number of squares satisfying both conditions:", results)
+
+# Test the function with some sample inputs
+```

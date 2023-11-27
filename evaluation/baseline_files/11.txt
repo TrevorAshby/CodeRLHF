@@ -1,0 +1,41 @@
+```python
+import math
+
+def roll_dice(num_faces):
+    # allocate space for the dice
+    dice = [0 for _ in range(num_faces)]
+
+    # allocate space for the sequence of commands
+    command = []
+
+    # allocate space for the top face of the dice
+    top_face = [0 for _ in range(num_faces)]
+
+    # initialize the top face to 0
+    for face in range(num_faces):
+        top_face[face] = 0
+
+    # initialize the sequence of commands
+    for i in range(num_faces):
+        command[i] = int(input("enter a command: "))
+
+    # loop until the end of the command sequence is reached
+    while len(command) > 0:
+        # check if the top face is 1
+        if top_face[i] == 1:
+            # roll the dice
+            dice[i] = math.factorial(top_face[i]) * math.pow(10, i)
+            command.pop(0)
+        else:
+            # print the result
+            print(command[0])
+            command.pop(0)
+        # move the top face one position to the right
+        i -= 1
+
+    # print the result
+    print(dice[i])
+
+# main function
+roll_dice(num_faces)
+```

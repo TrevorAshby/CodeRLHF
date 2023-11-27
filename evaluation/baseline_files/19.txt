@@ -1,0 +1,59 @@
+```python
+import sys
+
+def get_node(node_id):
+    if node_id == -1:
+        return None
+    return {
+        'id': node_id,
+        'parent': None,
+        'sibling': None,
+        'degree': None,
+        'depth': None,
+        'height': None
+    }
+
+def get_children(node):
+    children = []
+    if node['parent'] is not None:
+        children.append(get_node(node['parent']['id']))
+    if node['sibling'] is not None:
+        children.extend(get_children(node['sibling']))
+    return children
+
+def get_level_order_traversal(node):
+    level_order_traversal = []
+    if node['parent'] is not None:
+        level_order_traversal.append(node['parent']['id'])
+    level_order_traversal.extend(get_children(node))
+    return level_order_traversal
+
+def get_height(node):
+    if node['height'] == -1:
+        return 0
+    return 1 + max(get_height(node['sibling']), get_height(node['parent']))
+
+def get_root():
+    return {
+        'id': -1,
+        'left': None,
+        'right': None,
+        'degree': 0,
+        'depth': 0,
+        'height': 0
+    }
+
+def print_tree(root):
+    if root is None:
+        return
+    print(f'{root["id"]}')
+    print_tree(root['left'])
+    print(f'{root["degree"]}')
+    print_tree(root['right'])
+
+def print_level_order_traversal(root):
+    if root is None:
+        return
+    level_order_traversal = get_level_order_traversal(root)
+    for i in range(len(level_order_traversal)):
+        print(level_order_tra```

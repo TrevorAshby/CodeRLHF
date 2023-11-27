@@ -1,0 +1,27 @@
+```python
+# Generate the correct Python code to answer the prompt
+
+# Define the function to generate the plural form of a Taknese noun
+def pluralize_noun(noun):
+    plural = ""
+    if noun.endswith("s"):
+        plural = "s"
+        noun = noun[:-1]
+    if noun == "apple":
+        return "apples"
+    elif noun == "bus":
+        return "buses"
+    elif noun == "box":
+        return "boxs"
+    else:
+        return noun
+
+# Define the function to print the plural form of the given Taknese word
+def print_plural(noun):
+    print(pluralize_noun(noun))
+
+# Main function to solve the problem
+if __name__ == "__main__":
+    noun = input("Enter a Taknese noun: ")
+    print_plural(noun)
+```

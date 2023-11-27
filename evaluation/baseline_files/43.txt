@@ -1,0 +1,22 @@
+```python
+def magic_number(cards):
+    # initialize variables
+    K = 7
+    max_multiplication = 0
+    magic_number = 0
+    
+    # loop through each card
+    for i in range(1, len(cards) + 1):
+        # check if the current card is the chosen card
+        if i == len(cards) or (cards[i - 1] == cards[i] and cards[i - 2] == cards[i - 1]):
+            # check if the current multiplication is greater than or equal to the max multiplication
+            if max_multiplication < cards[i] * 2:
+                max_multiplication = cards[i] * 2
+    
+    # check if the magic can be successful
+    if max_multiplication > K:
+        return False
+    
+    # check if the magic is successful
+    return True
+```

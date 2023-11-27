@@ -1,0 +1,34 @@
+```python
+import math
+
+def simple_calculator(a, b):
+    if a == '?':
+        return math.inf
+    if b == '?':
+        return -math.inf
+    if a == '+':
+        return a + b
+    if a == '-':
+        return a - b
+    if a == '*':
+        return a * b
+    if a == '/':
+        return a / b
+    if b == '?':
+        return 0
+    raise ValueError
+
+def input_handler(dataset):
+    if dataset == '?':
+        return 'Sample Input'
+    if dataset == '+':
+        return simple_calculator(int(input()), int(input()))
+    if dataset == '-':
+        return simple_calculator(int(input()), int(input()))
+    if dataset == '*':
+        return simple_calculator(int(input()), int(input()))
+    if dataset == '/':
+        return simple_calculator(int(input()), int(input()))
+
+print(input_handler(dataset=input()))
+```

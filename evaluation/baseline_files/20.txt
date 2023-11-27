@@ -1,0 +1,58 @@
+```python
+def identical_programs(inputs):
+    # get the judge result
+    judge_result = "IDENTICAL"
+    
+    # loop through the inputs
+    for i, input_ in enumerate(inputs):
+        # check if the input is identical
+        if judge_result == "DIFFERENT":
+            if inputs[i] == inputs[i + 1]:
+                judge_result = "DIFFERENT"
+        else:
+            judge_result = "CLOSE"
+    
+    # return the judge result
+    return judge_result
+
+def difference_programs(inputs):
+    # get the judge result
+    judge_result = "DIFFERENT"
+    
+    # loop through the inputs
+    for i, input_ in enumerate(inputs):
+        # check if the input is identical
+        if judge_result == "DIFFERENT":
+            if inputs[i] == inputs[i + 1]:
+                judge_result = "DIFFERENT"
+        else:
+            if inputs[i] != inputs[i + 1]:
+                judge_result = "DIFFERENT"
+    
+    # return the judge result
+    return judge_result
+
+def solve(inputs):
+    # get the string literals
+    string_literals = [inputs[i] for i in range(100)]
+    
+    # loop through the inputs
+    for i, input_ in enumerate(inputs):
+        # check if the input is identical
+        if solve(input_):
+            return "CLOSE"
+    
+    # check if the last input is correct
+    if solve(inputs[99:]):
+        return "CLOSE"
+    
+    # check if the last input is incorrect
+    if not solve(inputs[:-1]):
+        return "DIFFERENT"
+    
+    # check if the last input is incorrect and the first input is identical
+    if solve(inputs[99:]) and solve(inputs[:-1]):
+        return "DIFFERENT"
+    
+    # check if the last input is incorrect and the first input is not identical
+    if solve(```

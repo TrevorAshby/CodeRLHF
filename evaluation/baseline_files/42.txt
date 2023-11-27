@@ -1,0 +1,12 @@
+```python
+def debt_hell(n):
+    interest = 0
+    weeks = 0
+    while n > 0:
+        interest += (n * 5 / 1000)
+        weeks += 1
+        n -= int(n / 1000)
+    return weeks
+
+print(debthell(5))
+```

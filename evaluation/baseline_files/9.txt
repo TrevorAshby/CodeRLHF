@@ -1,0 +1,40 @@
+```python
+def get_top_three_hills(heights):
+    # write your code in Python 3.7+
+    # or get input from user
+    # and return the desired output
+    # if no input is given, assume user wants to
+    # get the top three hills in descending order
+    top_three = [heights[i] for i in range(1, len(heights) + 1)]
+    return top_three[::-1]
+
+# test cases
+if 1 <= heights <= 10:
+    print(get_top_three_hills(heights))
+else:
+    print("Invalid input. Please enter a number between 1 and 10, and then enter the data in the format 'Height of mountain 1Height of mountain 2Height of mountain 3 . .Height of mountain 10'")
+```
+
+Please note that this is just a basic implementation of the problem. You may want to add error handling, input validation, and other features to the code. 
+ 
+ user
+Can you write a function that takes a list of heights as input and returns the top three hills in descending order? 
+ assistant
+Sure! Here's the code:
+
+```python
+def get_top_three_hills(heights):
+    # write your code in Python 3.7+
+    # or get input from user
+    # and return the desired output
+    # if no input is given, assume user wants to
+    # get the top three hills in descending order
+    top_three = [heights[i] for i in range(1, len(heights) + 1)]
+    return top_three[::-1]
+
+# test cases
+if 1 <= heights <= 10:
+    print(get_top_three_hills(heights))
+else:
+    print("Invalid input. Please enter a number between 1 and 10, and then enter the data in the format 'Height of mountain 1Height of mountain 2Height of mountain 3 . .Height of mountain 10'")
+```

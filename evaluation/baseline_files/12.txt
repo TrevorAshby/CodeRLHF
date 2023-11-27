@@ -1,0 +1,14 @@
+```python
+import iroha
+
+def is_haiku(phrases):
+    # write your code here
+    return True
+
+if __name__ == '__main__':
+    phrases = [i for i in iroha.get_phrases()]
+    if is_haiku(phrases):
+        print('It is possible to construct a haiku!')
+    else:
+        print('It is not possible to construct a haiku!')
+```

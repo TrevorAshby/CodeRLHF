@@ -1,0 +1,23 @@
+```python
+import math
+
+def min_max_sum(a):
+    min_value, max_value, sum_value = math.inf, math.inf, 0
+    for i in range(1, len(a)):
+        if a[i] < min_value:
+            min_value = a[i]
+        if a[i] > max_value:
+            max_value = a[i]
+        if a[i] == max_value:
+            sum_value += 1
+    return min_value, max_value, sum_value
+
+def main():
+    n = int(input())
+    a = list(map(int, input().split()))
+    result = min_max_sum(a)
+    print(result[2])
+
+if __name__ == '__main__':
+    main()
+```

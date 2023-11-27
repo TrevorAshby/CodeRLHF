@@ -1,0 +1,21 @@
+```python
+def mvmw(A, b):
+    n = len(b)
+    m = len(A[0])
+    c = np.zeros((n, m))
+    for i in range(n):
+        c[i] = A[i][0] * b[i]
+    return c
+
+def main():
+    A = np.array([[1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]])
+    b = np.array([[10, 11, 12],
+                 [13, 14, 15]])
+    c = mvmw(A, b)
+    print(c)
+
+if __name__ == '__main__':
+    main()
+```

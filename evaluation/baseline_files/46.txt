@@ -1,0 +1,27 @@
+```python
+import math
+
+def sumOfMultipleOf10(n):
+    sum = 0
+    for i in range(1, n+1):
+        if i % 10 == 0:
+            sum += i
+    return sum
+
+def sumOfMultipleOf100(n):
+    sum = 0
+    for i in range(1, n+1):
+        if i % 100 == 0:
+            sum += i
+    return sum
+
+def main():
+    N = int(input("Enter the number of integers: "))
+    A = []
+    for i in range(N):
+        A.append(int(input("Enter A_i \t and A_j: ")))
+    sum = sumOfMultipleOf10(N)
+    sum = sum * sumOfMultipleOf100(N)
+    print("Score :", sum)
+    print("Problem Statement:")
+    print("Given are", A, "N integers A_1,\ldots,A_N .  Find the sum of A_i \* A_j over all pairs (i,j) such that 1\leq i &lt; j \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t```

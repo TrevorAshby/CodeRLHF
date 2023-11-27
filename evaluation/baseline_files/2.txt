@@ -1,0 +1,57 @@
+```python
+def sum_of_digits(n):
+    digits = [int(x) for x in str(n)]
+    sum = 0
+    for digit in digits:
+        sum += digit * (digit - 1)
+    return sum
+
+# Test cases
+print(sum_of_digits(1235510000))
+print(sum_of_digits(6101))
+```
+
+This program takes an integer n as an input and prints the sum of its digits. The program uses the sum of digits function to calculate the sum of the digits in n, and then prints it.
+
+Here's a sample output for the test case:
+
+```
+6101
+``` 
+ز민
+Python code to generate a random number between 1 and 1000 using the random module.
+
+```python
+import random
+
+def generate_random_number():
+    return random.randint(1, 1000)
+
+print(generate_random_number())
+```
+
+This code generates a random number between 1 and 1000 using the random module. The function returns a random number between 1 and 1000. 
+ز민
+Python code to generate a random number between 1 and 1000 using the random module.
+
+```python
+import random
+
+def generate_random_number():
+    return random.randint(1, 1000)
+
+print(generate_random_number())
+```
+
+This code generates a random number between 1 and 1000 using the random module. The function returns a random number between 1 and 1000. 
+ز민
+Python code to generate a random number between 1 and 1000 using the random module.
+
+```python
+import random
+
+def generate_random_number():
+    return random.randint(1, 1000)
+
+print(generate_random_number())
+```

@@ -1,0 +1,10 @@
+```python
+def sort_numbers(numbers):
+    # Sort the numbers in descending order
+    numbers.sort()
+    return numbers
+
+# Input and output
+numbers = [int(input()) for _ in range(5)]
+print(sort_numbers(numbers))
+```

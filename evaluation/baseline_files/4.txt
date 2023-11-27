@@ -1,0 +1,16 @@
+```python
+def solution(A, B, C, D):
+    # write your code in Python 3.7
+    if A <= B <= C + D:
+        return int(A)
+    elif A <= B <= C:
+        return int(B)
+    elif C <= B <= D:
+        return int(C)
+    elif D <= B:
+        return int(D)
+    else:
+        return 0
+
+print(solution(int(input("Enter the first number: ")), int(input("Enter the second number: ")), int(input("Enter the third number: ")), int(input("Enter the fourth number: "))))
+```

@@ -1,0 +1,69 @@
+```python
+import math
+
+def get_min_time_to_make_n_pieces(n, x, t):
+    # Initialize variables
+    minutes = 0
+    pieces = n
+    time_taken = 6
+    minutes_remaining = 6
+
+    # Loop until all pieces are made
+    while minutes_remaining > 0 and pieces > 0:
+        # Get remaining time in minutes
+        remaining_time = t - minutes
+
+        # Check if time is less than 6 minutes
+        if remaining_time < 6:
+            # Update remaining time
+            t -= 6
+
+            # Check if pieces are done
+            if pieces == x:
+                # Update remaining time
+                t += 1
+
+                # Check if time is less than 6 minutes
+                if t < 6:
+                    # Update remaining time
+                    t += 1
+
+        # Update minutes
+        minutes += 1
+
+        # Check if pieces are done
+        if pieces == x:
+            # Update remaining time
+            t -= 1
+
+            # Check if time is less than 6 minutes
+            if t < 6:
+                # Update remaining time
+                t += 1
+
+    # Return minimum time
+    return minutes
+
+
+def main():
+    # Prompt for input
+    N = float(input("Enter the number of pieces: "))
+    X = float(input("Enter the number of Takoyaki pieces: "))
+    T = float(input("Enter the time in minutes to make the takoyaki: "))
+
+    # Check if input is valid
+    if N <= 0 or X <= 0 or T <= 0:
+        print("Invalid input")
+        main()
+
+    # Get minimum time to make takoyaki
+    minutes, pieces = get_min_time_to_make_n_pieces(int(X), int(N), int(T))
+
+    # Print result
+    print("Minutes: ", minutes)
+    print("Takoyaki pieces: ", pieces)
+
+
+if __name__ == "__main__":
+    main()
+```

@@ -1,0 +1,27 @@
+```python
+import random
+
+def doublets_occurred(dice1, dice2):
+    """
+    This function takes two dice and returns True if there are any doublets (i.e., dice1 and dice2 have the same value in the last position) in a row, and False otherwise.
+    """
+    count = 0
+    dice1_sum = 0
+    dice2_sum = 0
+    for i in range(len(dice1)):
+        dice1_sum += dice1[i]
+        dice2_sum += dice2[i]
+    if dice1_sum == dice2_sum:
+        return True
+    else:
+        return False
+
+if __name__ == '__main__':
+    N = int(input("Enter the number of rolls: "))
+    dice1 = [int(i) for i in input("Enter the first dice: ").split()]
+    dice2 = [int(i) for i in input("Enter the second dice: ").split()]
+    print("Doublets occurred at least three times in a row if:")
+    print(" - ", doublets_occurred(dice1, dice2))
+    print(" - ", doublets_occurred(dice1, dice2))
+    print(" - ", doublets_occurred(dice1, dice2))
+```

@@ -1,0 +1,66 @@
+```python
+def get_kyu_score(x):
+    if x < 400:
+        return 0
+    elif x < 599:
+        return 1
+    elif x < 800:
+        return 2
+    elif x < 900:
+        return 3
+    elif x < 1000:
+        return 4
+    elif x < 1100:
+        return 5
+    elif x < 1200:
+        return 6
+    elif x < 1300:
+        return 7
+    elif x < 1400:
+        return 8
+    elif x < 1500:
+        return 9
+    elif x < 1600:
+        return 10
+    elif x < 1700:
+        return 11
+    elif x < 1800:
+        return 12
+    elif x < 1900:
+        return 13
+    else:
+        return 14
+
+def get_kyu_rank(x):
+    if x < 400:
+        return 0
+    elif x < 599:
+        return 1
+    elif x < 800:
+        return 2
+    elif x < 900:
+        return 3
+    elif x < 1000:
+        return 4
+    elif x < 1100:
+        return 5
+    elif x < 1200:
+        return 6
+    elif x < 1300:
+        return 7
+    elif x < 1400:
+        return 8
+    elif x < 1500:
+        return 9
+    elif x < 1600:
+        return 10
+    elif x < 1700:
+        return 11
+    elif x < 1800:
+        return 12
+    elif x < 1900:
+        return 13
+    else:
+        return 14
+
+def```

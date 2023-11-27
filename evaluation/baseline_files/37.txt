@@ -1,0 +1,9 @@
+```python
+def will_turn_on_air_conditioner(temperature):
+    if temperature >= 30 and temperature < 40:
+        return "Yes"
+    else:
+        return "No"
+
+print(will_turn_on_air_conditioner(input()))
+```

@@ -1,0 +1,10 @@
+```python
+N = int(input())
+A = list(map(int, input().split()))
+min_height = 0
+for i in range(N):
+    height = int(input())
+    if min_height > height:
+        min_height = height
+print(min_height)
+```

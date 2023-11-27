@@ -1,0 +1,14 @@
+```python
+def is_product_positive(a, b):
+    if a == 0 or b == 0:
+        return False
+    product = 1
+    i = 1
+    while i <= b:
+        if a % i == 0:
+            product *= i
+            i += 1
+        elif product == a:
+            return True
+    return False
+```

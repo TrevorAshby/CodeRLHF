@@ -1,0 +1,24 @@
+```python
+def evaluate_student_performance(scores):
+    total_score = 0
+    for i in scores:
+        if i == 'F':
+            total_score += -1
+        elif i == 'A':
+            total_score += 10
+        elif i == 'B':
+            total_score += 20
+        elif i == 'C':
+            total_score += 50
+        elif i == 'D':
+            total_score += -100
+    return total_score / len(scores)
+
+def main():
+    scores = input("Enter the scores of the midterm examination m (out of 50), the final examination f (out of 50) and the makeup examination r (out of 100): ")
+    total_score = evaluate_student_performance(scores.split())
+    print("The final performance of the student is {}".format(total_score))
+
+if __name__ == '__main__':
+    main()
+```

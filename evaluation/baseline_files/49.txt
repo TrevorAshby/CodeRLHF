@@ -1,0 +1,25 @@
+```python
+def knapsack_solver(values, weights):
+    # Calculate the maximum possible value
+    max_value = sum(values)
+
+    # Calculate the total weight of each item
+    total_weight = 0
+    for value, weight in values:
+        total_weight += weight * value
+
+    # Calculate the combined weight of all items
+    combined_weight = sum(weights)
+    combined_weight = total_weight / weights.count(values[0])
+
+    # Calculate the maximum total value
+    max_total_value = max(values) * combined_weight
+
+    # Return the maximum total value
+    return max_total_value
+
+# Example input/output
+values = [4, 54, 25, 22, 18, 3]
+weights = [1, 1, 1, 1, 1, 1]
+print("Maximum total value: ", knapsack_solver(values, weights))
+```

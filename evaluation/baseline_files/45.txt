@@ -1,0 +1,13 @@
+```python
+def solution(N):
+    a, b, c = 1, 1, 1
+    while True:
+        if (a * b) + (c if c else 0) == N:
+            return a
+        elif a > b:
+            a, b = b, a
+        elif a < c:
+            c, b = c, a
+        else:
+            return b
+```

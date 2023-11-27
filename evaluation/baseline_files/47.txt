@@ -1,0 +1,15 @@
+```python
+def can_choose_k_integers_between_1_and_N(n, k):
+    if n == 1:
+        return False
+    if n % k == 0:
+        return True
+    return can_choose_k_integers_between_1_and_N(n // k, k) and can_choose_k_integers_between_1_and_N(n % k, k)
+
+n = int(input("Enter the value of N: "))
+k = int(input("Enter the value of K: "))
+if can_choose_k_integers_between_1_and_N(n, k):
+    print("Can choose", k, "integers between 1 and N")
+else:
+    print("No, we cannot choose", k, "integers between 1 and N")
+```

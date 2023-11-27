@@ -1,0 +1,36 @@
+```python
+def reverse_polish_notation(expression):
+    # Initialize the stack
+    stack = []
+
+    # Push the first operand onto the stack
+    stack.append(expression[0])
+
+    # Loop until all operands have been processed
+    while len(stack) > 0:
+        # Get the next operation
+        operation = stack.pop()
+
+        # Push the operand onto the stack
+        stack.append(operation)
+
+        # Process the next operation
+        if operation == "+":
+            stack.append(stack.pop())
+            stack.append(stack.pop())
+        elif operation == "-":
+            stack.append(stack.pop())
+            stack.append(stack.pop())
+        elif operation == "*":
+            result = 0
+            for i in range(len(stack) - 1, -1, -1):
+                result = result * stack[i]
+            return result
+
+    raise ValueError("Invalid expression")
+
+# Example usage
+expression = input("Enter an expression: ")
+result = reverse_polish_notation(expression)
+print("The computational result is: ", result)
+```

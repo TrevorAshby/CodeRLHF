@@ -1,0 +1,54 @@
+```python
+import math
+
+def get_colors_count(c_list, r_list):
+    count = 0
+    for c in c_list:
+        if c in r_list:
+            count += 1
+    return count
+
+def get_question_answer(c_list, r_list, q):
+    n = len(c_list)
+    q_count = 0
+    for i in range(q):
+        if c_list[i] == r_list[i]:
+            q_count += 1
+        if q_count == 600:
+            return n, q_count
+    return n, 0
+
+def get_question_answers(c_list, r_list, q):
+    n = len(c_list)
+    ans = [0 for i in range(n)]
+    for i in range(q):
+        if c_list[i] == r_list[i]:
+            ans[i] += 1
+    return ans
+
+def get_question_count(c_list, r_list):
+    n = len(c_list)
+    q_count = 0
+    for i in range(q):
+        if c_list[i] == r_list[i]:
+            q_count += 1
+    return q_count
+
+def get_question_solutions(c_list, r_list, q):
+    n = len(c_list)
+    ans = [0 for i in range(n)]
+    for i in range(q):
+        if c_list[i] == r_list[i]:
+            ans[c_list[i]] += 1
+    return ans
+
+def get_solutions(c_list, r_list):
+    n = len(c_list)
+    ans = [0 for i in range(n)]
+    for i in range(q):
+        if c_list[i] == r_list[i]:
+            ans[c_list[i]] += 1
+    return ans
+
+def main():
+    c_list = [1, 2, 3, 1```

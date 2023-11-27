@@ -1,0 +1,21 @@
+```python
+def circle(r):
+    return (r**2) / 2.0
+
+def area(r):
+    return (circle(r) + circle(r)) / 2.0
+
+def circumference(r):
+    return 2 * circle(r)
+
+def main():
+    r = input("Enter a value for r: ")
+    print("Area: ", area(r))
+    print("Circumference: ", circumference(r))
+    print("")
+    print("Enter a value for r to get the value again: ")
+    input()
+
+if __name__ == '__main__':
+    main()
+```

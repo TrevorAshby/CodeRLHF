@@ -1,0 +1,26 @@
+```python
+import os
+import csv
+
+# Open the file for reading
+with open('login_logout_records.csv', 'r') as file:
+    reader = csv.reader(file)
+    next(reader, None)  # skip the header
+    for record in reader:
+        delim = ','
+        t = int(record[0])
+        n = int(record[1])
+        m = int(record[2])
+        s = record[3]
+        e = record[4]
+        t = int(t)
+        n = int(n)
+        m = int(m)
+        s = s.replace(' ', '')
+        e = e.replace(' ', '')
+        if t == 0:
+            print(f'{s}:{n}:{m}:{e}:{t}')
+        else:
+            print(f'{s}:{n}:{m}:{e}')
+
+```

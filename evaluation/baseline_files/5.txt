@@ -1,0 +1,7 @@
+```python
+def cubic(x):
+    return x * x * x
+
+x = int(input())
+print(cubic(x))
+```
