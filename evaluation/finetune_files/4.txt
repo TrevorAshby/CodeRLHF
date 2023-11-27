@@ -1,0 +1,9 @@
+```python
+a,b,c,d = map(int,input().split())
+
+ans = 0
+for i in range(a,b+1):
+    if c*i%d == 0 and c*i%a == 0:
+        ans += 1
+print(ans)
+```

@@ -1,0 +1,12 @@
+```python
+n = int(input())
+cards = list(map(str, input().split()))
+
+for i in range(n):
+    if cards[i] == 'S':
+        cards[i] = 'H'
+    elif cards[i] == 'H':
+        cards[i] = 'S'
+
+print(cards)
+```

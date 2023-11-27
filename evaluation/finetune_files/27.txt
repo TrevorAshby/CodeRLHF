@@ -1,0 +1,13 @@
+```python
+a,b = map(int,input().split())
+if a == '+':
+    print(a+b)
+elif a == '-':
+    print(a-b)
+elif a == '*':
+    print(a*b)
+elif a == '/':
+    print(a/b)
+else:
+    print('Invalid operator')
+```

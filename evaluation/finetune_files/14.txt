@@ -1,0 +1,7 @@
+```python
+m,f,r=map(int,input().split())
+if m+f+r>=80:
+  print('ACF')
+else:
+  print('A')
+```

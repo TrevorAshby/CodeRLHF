@@ -1,0 +1,9 @@
+```python
+h = []
+with open('data.txt', 'r') as f:
+    for line in f:
+        h.append(int(line))
+
+h.sort(reverse=True)
+print(*h[1:], sep='\t', sep='\t', nl='\n')
+```

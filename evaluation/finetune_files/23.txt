@@ -1,0 +1,11 @@
+```python
+n = int(input())
+c = list(map(str, input().split()))
+
+ans = 0
+for i in range(n):
+    if c[i] == 'W':
+        ans += 1
+
+print(ans)
+```

@@ -1,0 +1,22 @@
+```python
+import sys
+input = sys.stdin.readline
+inputs = sys.stdin.readlines
+inputs = map(int,inputs())
+
+def main():
+    n = input()
+    if n == 'E':
+        print(input())
+    elif n == 'N':
+        print(input())
+    elif n == 'S':
+        print(input())
+    elif n == 'W':
+        print(input())
+    else:
+        print(input())
+
+if __name__ == '__main__':
+    main()
+```

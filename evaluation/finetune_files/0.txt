@@ -1,0 +1,84 @@
+```python
+import sys
+
+def main():
+    X, K, D = map(int, input().split())
+    if X == 0:
+        print(0)
+        exit()
+    if K == 0:
+        print(0)
+        exit()
+    if K > X:
+        print(0)
+        exit()
+    if K < 0:
+        print(0)
+        exit()
+    if X % K == 0:
+        print(0)
+        exit()
+    if X < 0:
+        print(0)
+        exit()
+    if X > D:
+        print(0)
+        exit()
+    if X < D:
+        print(0)
+        exit()
+    if X % D == 0:
+        print(0)
+        exit()
+    if X < 0:
+        print(0)
+        exit()
+    if X > D:
+        print(0)
+        exit()
+    if X < D:
+        print(0)
+        exit()
+    if X % D == 0:
+        print(0)
+        exit()
+    if X < 0:
+        print(0)
+        exit()
+    if X > -D:
+        print(0)
+        exit()
+    if X < -D:
+        print(0)
+        exit()
+    if X % -D == 0:
+        print(0)
+        exit()
+    if X < -D:
+        print(0)
+        exit()
+    if X < -D:
+        print(0)
+        exit()
+    if X % -D == 0:
+        print(0)
+        exit()
+    if X < -D:
+        print(0)
+        exit()
+    if X % -D == 0:
+        print(0)
+        exit()
+    if X < -D:
+        print(0)
+        exit()
+    if X % -D == 0:
+        print(0)
+        exit()
+    if X < -D:
+        print(0)
+        exit()
+    if X % -D == 0:
+        print(0)
+        exit()
+    if X <```

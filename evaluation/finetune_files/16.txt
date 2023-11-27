@@ -1,0 +1,10 @@
+```python
+import sys
+
+N = int(input())
+
+def f(n):
+    return sum(map(int, input().split()))
+
+print(f(N))
+```

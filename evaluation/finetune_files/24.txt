@@ -1,0 +1,56 @@
+```python
+import sys
+import math
+
+N = int(input())
+D = list(map(int, input().split()))
+
+if N == 1:
+    print('Yes')
+    exit()
+
+if D[0] == D[1]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[3]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[3] and D[4] == D[5]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[3] and D[4] == D[5] and D[6] == D[7]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[4] and D[3] == D[5]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[5] and D[3] == D[6]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[6] and D[3] == D[7]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[7] and D[3] == D[6]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[6] and D[3] == D[7]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[5] and D[3] == D[7]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[4] and D[3] == D[6]:
+    print('Yes')
+    exit()
+
+if D[0] == D[1] and D[2] == D[3] and D[4```

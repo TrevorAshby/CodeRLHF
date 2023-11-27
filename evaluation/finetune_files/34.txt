@@ -1,0 +1,12 @@
+```python
+a = input()
+stack = []
+for i in a:
+    if i == '+':
+        stack.append(int(input()))
+    elif i == '-':
+        stack.append(-stack.pop())
+    elif i == '*':
+        stack.append(stack.pop() * stack.pop())
+print(stack.pop())
+```

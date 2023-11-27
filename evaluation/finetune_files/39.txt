@@ -1,0 +1,12 @@
+```python
+n, m = map(int, input().split())
+A = [[int(input()) for i in range(m)] for j in range(n)]
+b = list(map(int, input().split()))
+
+for i in range(m):
+    for j in range(n):
+        A[i][j] = b[i] * A[i][j]
+
+for i in range(m):
+    print(A[i])
+```

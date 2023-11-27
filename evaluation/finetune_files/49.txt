@@ -1,0 +1,9 @@
+```python
+n, w, v = map(int, input().split())
+
+ans = 0
+for i in range(n):
+    ans += v[i] * w[i]
+
+print(ans)
+```

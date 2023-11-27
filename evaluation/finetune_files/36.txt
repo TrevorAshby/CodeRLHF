@@ -1,0 +1,51 @@
+```python
+import sys
+import math
+import numpy as np
+
+def main():
+    n, m, q = map(int, input().split())
+    records = []
+    for _ in range(q):
+        t, r = map(int, input().split())
+        records.append([t, r])
+    t, r = map(int, input().split())
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260
+    r = r - 1260
+    t = t - 1260```

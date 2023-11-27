@@ -1,0 +1,13 @@
+```python
+n = int(input())
+a = list(map(int, input().split()))
+
+min_value = max_value = sum = 0
+for i in range(n):
+    if a[i] < min_value:
+        min_value = a[i]
+    if a[i] > max_value:
+        max_value = a[i]
+    sum += a[i]
+print(min_value, max_value, sum)
+```

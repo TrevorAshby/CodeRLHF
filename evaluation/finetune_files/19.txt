@@ -1,0 +1,14 @@
+```python
+n = int(input())
+
+ids = []
+
+for i in range(n):
+    id, left, right, depth, height, type = map(int, input().split())
+    ids.append([id, left, right, depth, height, type])
+
+ids.sort(key=lambda x: x[0])
+
+for i in range(n):
+    print(ids[i][1], ids[i][2], ids[i][3], ids[i][4], ids[i][5])
+```

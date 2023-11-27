@@ -1,0 +1,4 @@
+```python
+a,b,c,d,e = map(int,input().split())
+print(sorted(list(map(str,(a,b,c,d,e))))
+```

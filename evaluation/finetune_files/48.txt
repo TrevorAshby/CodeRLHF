@@ -1,0 +1,23 @@
+```python
+import sys
+import math
+
+N, K = map(int, input().split())
+A = list(map(int, input().split()))
+
+ans = 0
+
+for i in range(N):
+    if A[i] == 0:
+        continue
+    else:
+        ans += A[i]
+        if i + 1 < N:
+            ans += A[i + 1]
+        if i + 2 < N:
+            ans += A[i + 2]
+        if i + 3 < N:
+            ans += A[i + 3]
+
+print(ans)
+```

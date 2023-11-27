@@ -1,0 +1,10 @@
+```python
+import sys
+
+S = int(input())
+
+if S % 60 != 0:
+    print(S // 60, ":" + str(S % 60))
+else:
+    print(S // 60, ":" + str(S % 60))
+```

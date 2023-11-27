@@ -1,0 +1,11 @@
+```python
+G = [[] for _ in range(100000)]
+for i in range(100000):
+    G[i].append(i)
+
+for i in range(100000):
+    G[i].sort()
+
+for i in range(100000):
+    print(G[i][0])
+```

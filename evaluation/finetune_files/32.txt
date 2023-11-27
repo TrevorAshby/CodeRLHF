@@ -1,0 +1,8 @@
+```python
+k = int(input())
+
+if k % 7 == 0:
+    print(4)
+else:
+    print(4)
+```

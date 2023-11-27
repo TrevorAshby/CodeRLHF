@@ -1,0 +1,8 @@
+```python
+h,w = map(int,input().split())
+if h == 0:
+  print(''.join(['#' for i in range(w)]))
+else:
+  for i in range(w):
+    print('#' + str(i) + '#')
+```

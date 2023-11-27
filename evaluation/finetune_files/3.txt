@@ -1,0 +1,4 @@
+```python
+s = input()
+print(s.split())
+```
